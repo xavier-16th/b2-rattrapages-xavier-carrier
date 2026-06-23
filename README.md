@@ -14,14 +14,13 @@ rattrapage mangoo
 2. Assurez-vous d'avoir une base de données MySQL nommée `mongoo`.
 3. Créez la table `commande` dans votre base de données avec la structure suivante :
    ```sql
-   CREATE TABLE commande (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       nom VARCHAR(255) NOT NULL,
-       prenom VARCHAR(255) NOT NULL,
-       adresse TEXT NOT NULL,
-       prix DECIMAL(10, 2) NOT NULL,
-       statut VARCHAR(255) DEFAULT 'Order Received'
-   );
+CREATE TABLE `commande` (
+  `id` int NOT NULL,
+  `nom` varchar(50) DEFAULT NULL,
+  `prenom` varchar(50) DEFAULT NULL,
+  `adresse` text,
+  `prix` float DEFAULT NULL,
+  `statut` varchar(50) DEFAULT NULL
    ```
 
 ###  Sources et ressources utiles
